@@ -15,7 +15,7 @@ sap.ui.define([
 				var aData = jQuery.ajax({
 					type: "GET",
 					contentType: "application/json",
-					url: "https://us.wio.seeed.io/v1/node/GroveUltraRangerD0/",
+					//url: "https://us.wio.seeed.io/v1/node/GroveUltraRangerD0/",
 					dataType: "json",
 					async: false,
 					success: function(data, textStatus, jqXHR) {
