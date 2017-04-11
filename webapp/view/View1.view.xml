@@ -1,11 +1,21 @@
-<mvc:View xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="sit.controller.View1" displayBlock="true">
+<mvc:View xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" 
+	controllerName="sit.controller.View1" displayBlock="true">
 	<App>
 		<pages><Page title="SIT IoT - Event Tracker">
 				<content>
 				    <Label text="Distance:" width="100%" id="__labelDistance"/>
 				    <Label text="{temp>range_cm}" width="100%" id="__labelDistanceValue"/>
-				</content>
-			</Page>
+					<FlexBox
+					height="100px"
+					alignItems="Start"
+					justifyContent="Center"><items>
+						<VBox fitContainer="true">
+							<HBox id="map_canvas" fitContainer="true" height="900px">
+							</HBox>
+						</VBox>
+				</items>
+				</FlexBox>
+			</content></Page>
 		</pages>
 	</App>
 </mvc:View>

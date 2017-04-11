@@ -14,19 +14,26 @@
 			data-sap-ui-compatVersion="edge"
 			data-sap-ui-resourceroots='{"sit": ""}'>
 		</script>
+		<script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
 
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 		<!-- test github -->
 
 		<script>
-			sap.ui.getCore().attachInit(function() {
+				//sap.ui.localResources("maps");
+				var app = new sap.m.App({initialPage:"idMaps1"});
+				var page = sap.ui.view({id:"idMaps1", viewName:"sit.view.View1", type:sap.ui.core.mvc.ViewType.XML});
+				app.addPage(page);
+				app.placeAt("content");
+			
+			/*sap.ui.getCore().attachInit(function() {
 				new sap.m.Shell({
 					app: new sap.ui.core.ComponentContainer({
 						height : "100%",
 						name : "sit"
 					})
 				}).placeAt("content");
-			});
+			});*/
 		</script>
 	</head>
 
